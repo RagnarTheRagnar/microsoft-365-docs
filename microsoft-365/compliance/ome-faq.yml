@@ -222,7 +222,7 @@ sections:
           | Platform | Read mail | View email attachments |
           |----------|-----------|------------------------|
           | Outlook on the web | Yes | Yes                |
-          | Outlook for Windows| Yes | Yes                |
+          | Outlook for Windows| No | No                |
           | Outlook for Mac    | Yes | Yes                |
           | Outlook for Android| Yes | Yes                |
           | Outlook for iOS    | Yes | Yes                 |
@@ -230,11 +230,13 @@ sections:
           > [!NOTE]
           > Android and iOS would use the Office mobile app to view the encrypted attachments, and not directly in Outlook mobile.
           
-          There are currently two known limitations:
+          There are currently three known limitations:
           
           - You can't open attachments to emails that you receive on mobile devices by using Outlook mobile.
           
           - In Outlook Win32, for users assigned to a shared mailbox through an email-enabled security group, the user will see a notification mail to view the encrypted mail using a web browser.  In order to view the encrypted mail directly in Outlook Win32, Outlook and Azure Information Protection unified labeling clients require the user to be directly assigned to the shared mailbox with full access permissions and automapping enabled. Automapping is enabled by default for Exchange Online.
+          
+          - External Senders sending replies to encrypted emails to a shared mailbox will NOT be decrypted within the Outlook Desktop Client they will only be decrypted within OWA.
           
           **To assign a user to the shared mailbox**
           
